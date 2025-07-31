@@ -1,0 +1,150 @@
+/* GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('https://i.pinimg.com/736x/04/ef/20/04ef201221bdc04b4aa841350ac92fc0.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+  min-height: 100vh;
+}
+
+/* HEADER - NAVBAR */
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #0e0e11;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  border-bottom: 3px solid hsl(64, 100%, 50%);
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: hsl(64, 100%, 50%);
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-buttons button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding: 5px;
+}
+
+.nav-buttons button:hover {
+  color: hsl(64, 100%, 50%);
+}
+
+/* FORMULARIO */
+form {
+  background-color: #0e0e11;
+  padding: 20px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 120px; 
+}
+
+.form-titulo {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: hsl(64, 100%, 50%);
+}
+
+form label {
+  font-weight: bold;
+}
+
+form input,
+form select,
+form button {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+form input,
+form select {
+  background-color: #444;
+  color: #fff;
+}
+
+form input::placeholder {
+  color: #aaa;
+}
+
+form button {
+  background-color: hsl(64, 100%, 50%);
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: hsl(64, 100%, 60%);
+}
+
+/* MENSAJE */
+.mensaje {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.mensaje.error {
+  background-color: #ff3333;
+  color: #fff;
+}
+
+.mensaje.confirmacion {
+  background-color: #33cc77;
+  color: #fff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  form {
+    padding: 15px;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .nav-buttons button {
+    font-size: 0.9rem;
+  }
+}
